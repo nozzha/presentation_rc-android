@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dialog_horizontal_margin"
+        android:paddingRight="@dimen/dialog_horizontal_margin"
+        android:paddingTop="@dimen/dialog_vertical_margin">
+
+        <TextView
+            android:id="@+id/txtTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dialog_vertical_margin" />
+
+        <ImageView
+            android:id="@+id/winAppImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nozzha_prc_windows" />
+
+        <TextView
+            android:id="@+id/linkBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dialog_vertical_margin"
+            android:visibility="gone" />
+
+        <CheckBox
+            android:id="@+id/showAgain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/show_again"
+            android:layout_marginTop="@dimen/dialog_vertical_margin"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

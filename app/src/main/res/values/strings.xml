@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Presentation Remote Control</string>
+    <string name="connecting">Connecting ...</string>
+    <string name="disconnecting">Disconnecting ...</string>
+    <string name="what_is_this">What is this?</string>
+    <string name="what_is_this_link"><a href="">What is this?</a></string>
+    <string name="slides_control_buttons">“ Use volume up/down buttons to move slides „</string>
+    <string name="whats_this_msg">You can get the `IP Address` &amp; `Port` from <a href="#norc-win">Nozzha PRC for Windows</a> that is installed on your Laptop / Personal Computer.\nSee image below</string>
+    <string name="download_win_app">Download Nozzha PRC for Windows</string>
+    <string name="download_win_app_link"><a href="">Download Nozzha PRC for Windows</a></string>
+    <string name="volume_ctrls_msg">After connecting to your Laptop / Personal Computer, and starting your presentation.\nYou can now move your slides using your phone volume up/down buttons.</string>
+    <string name="moving_slides">Moving your slides</string>
+    <string name="show_again">Show this again</string>
+    <string name="about">About</string>
+    <string name="about_link"><a href="">About</a></string>
+    <string name="dismiss">Dismiss</string>
+    <string name="download_win_app_msg">To control you presentation slide, you\'ll also need to download the Windows application on your Laptop / Personal Computer.</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="connect">Connect</string>
+    <string name="no_app_can_handle_op">No application can handle this operation!</string>
+    <string name="about_label">About Nozzha PRC</string>
+    <string name="nozzha_website_link"><a href="http://nozzha.com/">nozzha.com</a></string>
+</resources>
