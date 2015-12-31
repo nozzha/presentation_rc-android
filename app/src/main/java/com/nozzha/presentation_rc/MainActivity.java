@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // Check if user has unchecked the `Show again` option
         // for the download dialog
-        if(!Settings.hasLearntDownloadWinApp(this)) {
+        if (!Settings.hasLearntDownloadWinApp(this)) {
             // Tell users that they need to install Nozzha PRC for Windows
             // application in order to control their presentation slides
             AlertDialog dialog = DownloadWinAppDialog.create(this);
@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initSettings() {
         ipAddressET.setText(Settings.getIPAddress(this));
 
-        if(ipAddressET.getText().length() >= 1) {
+        if (ipAddressET.getText().length() >= 1) {
             // Move caret to the end of the text
             ipAddressET.setSelection(ipAddressET.getText().length());
         }
@@ -91,14 +91,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return super.dispatchKeyEvent(event);
         }
 
-        if (event.getAction() != KeyEvent.ACTION_UP) {
+        if (event.getAction() != KeyEvent.ACTION_UP
+                && (event.getKeyCode() == KeyEvent.KEYCODE_VOLUME_UP
+                || event.getKeyCode() == KeyEvent.KEYCODE_VOLUME_DOWN)) {
             // To avoid calling the action more than once, as there are at least two actions
             // are called when pressing a button `ACTION_UP` & `ACTION_DOWN`.
             // And why listening to `ACTION_UP` instead of `ACTION_DOWN`? That is because
             // if user keep pressing the button the `ACTION_DOWN` would be called more than
             // once.
 
-            return super.dispatchKeyEvent(event);
+            return true;
         }
 
         if (event.getKeyCode() == KeyEvent.KEYCODE_VOLUME_UP) {
@@ -174,7 +176,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     // Check if user has unchecked the `Show again` option
                     // for the slides controls dialog
-                    if(!Settings.hasLearntVolumeControls(MainActivity.this)) {
+                    if (!Settings.hasLearntVolumeControls(MainActivity.this)) {
                         // Tell users how they can control their presentation slides
                         AlertDialog dialog = VolumeControlsDialog.create(MainActivity.this);
                         dialog.show();
